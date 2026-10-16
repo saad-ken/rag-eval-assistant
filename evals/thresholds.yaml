@@ -1,0 +1,6 @@
+# Quality gate: the eval run FAILS (exit code 1) if any metric is below its minimum.
+retrieval_hit_rate: 0.90
+answer_correctness: 0.80
+groundedness: 0.85
+citation_accuracy: 0.85
+refusal_accuracy: 0.80

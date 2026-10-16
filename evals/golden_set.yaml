@@ -1,0 +1,99 @@
+# Golden evaluation set for data/sample_docs.
+# expected_source: file that must be retrieved / cited
+# must_include: key facts (case-insensitive) a correct answer must contain
+# out_of_scope: true => the assistant must say "I don't know"
+- id: leave-annual
+  question: How many days of paid annual leave do full-time employees get?
+  expected_source: handbook.md
+  must_include: ["24 days"]
+- id: leave-carryover
+  question: How many unused leave days can be carried over?
+  expected_source: handbook.md
+  must_include: ["5"]
+- id: sick-certificate
+  question: When is a medical certificate required for sick leave?
+  expected_source: handbook.md
+  must_include: ["3 consecutive days"]
+- id: parental-primary
+  question: How long is parental leave for the primary caregiver?
+  expected_source: handbook.md
+  must_include: ["26 weeks"]
+- id: remote-days
+  question: How many days per week can employees work remotely?
+  expected_source: handbook.md
+  must_include: ["3 days"]
+- id: office-days
+  question: Which days are in-office collaboration days?
+  expected_source: handbook.md
+  must_include: ["tuesday", "thursday"]
+- id: expense-deadline
+  question: Within how many days must expense claims be submitted?
+  expected_source: handbook.md
+  must_include: ["30 days"]
+- id: expense-preapproval
+  question: Which expenses need manager pre-approval?
+  expected_source: handbook.md
+  must_include: ["10,000"]
+- id: password-length
+  question: What is the minimum password length?
+  expected_source: handbook.md
+  must_include: ["14 characters"]
+- id: lost-laptop
+  question: How quickly must a lost laptop be reported?
+  expected_source: handbook.md
+  must_include: ["24 hours"]
+- id: core-hours
+  question: What are the core working hours?
+  expected_source: handbook.md
+  must_include: ["11:00", "16:00"]
+- id: price-team
+  question: How much does the Team plan cost per user per month?
+  expected_source: product_faq.md
+  must_include: ["4,500"]
+- id: trial
+  question: How long is the free trial and is a credit card required?
+  expected_source: product_faq.md
+  must_include: ["14-day"]
+- id: sso
+  question: Which plan includes single sign-on (SSO)?
+  expected_source: product_faq.md
+  must_include: ["enterprise"]
+- id: data-sources
+  question: Which data sources does Brightleaf Insights support?
+  expected_source: product_faq.md
+  must_include: ["postgresql", "snowflake", "bigquery"]
+- id: retention
+  question: How long is query history retained on the Enterprise plan?
+  expected_source: product_faq.md
+  must_include: ["1 year"]
+- id: browsers
+  question: Which browsers do the Playwright end-to-end tests run on?
+  expected_source: release_test_plan.txt
+  must_include: ["chromium", "firefox", "webkit"]
+- id: exit-critical
+  question: What are the exit criteria for open critical and major defects?
+  expected_source: release_test_plan.txt
+  must_include: ["zero open critical"]
+- id: p95
+  question: What p95 dashboard load time is required?
+  expected_source: release_test_plan.txt
+  must_include: ["2 seconds"]
+- id: regression-pass
+  question: What automated regression pass rate is needed to ship?
+  expected_source: release_test_plan.txt
+  must_include: ["98 percent"]
+- id: oos-ceo
+  question: Who is the CEO of Brightleaf Analytics?
+  out_of_scope: true
+- id: oos-stock
+  question: What was the company's stock price last quarter?
+  out_of_scope: true
+- id: oos-pizza
+  question: What is the best recipe for margherita pizza?
+  out_of_scope: true
+- id: oos-gym
+  question: Does Brightleaf reimburse gym memberships?
+  out_of_scope: true
+- id: oos-weather
+  question: What will the weather be in Mumbai tomorrow?
+  out_of_scope: true

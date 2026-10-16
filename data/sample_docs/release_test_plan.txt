@@ -1,0 +1,24 @@
+Brightleaf Insights Release Test Plan (v3.2)
+
+Scope
+This plan covers the v3.2 release of Brightleaf Insights, which adds scheduled email reports and the BigQuery connector.
+
+Entry criteria
+Testing starts only after the build passes all unit tests and the staging deployment is healthy.
+
+Test approach
+End-to-end UI tests are automated with Playwright and run on Chromium, Firefox and WebKit.
+API tests for the reporting service are written with Rest Assured.
+Performance testing uses k6 with a target of 500 concurrent users.
+
+Exit criteria
+The release can ship when there are zero open critical defects and no more than 3 open major defects.
+The p95 dashboard load time must be under 2 seconds at 500 concurrent users.
+Automated regression pass rate must be at least 98 percent.
+
+Defect severity
+A critical defect blocks a core workflow with no workaround.
+A major defect breaks a feature but has a workaround.
+
+Schedule
+Regression testing runs for 5 working days. The release sign-off meeting is owned by the QA lead.
