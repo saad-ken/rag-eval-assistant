@@ -5,3 +5,12 @@ __pycache__/
 .index/
 reports/*.html
 .pytest_cache/
+
+# secrets
+.env.*
+!.env.example
+*.pem
+*.key
+secrets*
+credentials*
+.streamlit/secrets.toml
